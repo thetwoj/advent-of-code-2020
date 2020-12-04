@@ -3,7 +3,7 @@ def how_many_trees(tree_map, x_slope, y_slope):
     y = 0
     trees = 0
     while y <= len(tree_map) - 1:
-        if tree_map[y][x % len(tree_map[y])] == '#':
+        if tree_map[y][x % len(tree_map[y])] == "#":
             trees += 1
         y += y_slope
         x += x_slope
@@ -19,9 +19,9 @@ if __name__ == "__main__":
     # part 1
     input_map = get_input()
     trees = how_many_trees(input_map, 3, 1)
-    print(f'Ran into {trees} trees with a 3/1 slope')
+    print(f"Ran into {trees} trees with a 3/1 slope")
 
-    print("-"*20)
+    print("-" * 20)
     # part 2
     slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]  # (x, y)
     trees_encountered = []
@@ -32,4 +32,4 @@ if __name__ == "__main__":
     for tree_count in trees_encountered:
         product *= tree_count
 
-    print(f'Product of trees encountered across all slopes is {product}')
+    print(f"Product of trees encountered across all slopes is {product}")
