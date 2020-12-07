@@ -13,6 +13,8 @@ def group_answers(inputs):
 
 
 def unanimous_answers(inputs):
+    # Doing this with set intersections would have been easier
+    # since that's effectively what I manually implemented
     answers = []
     current_group = set()
     next_first = True
